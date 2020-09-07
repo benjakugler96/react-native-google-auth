@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { View } from 'react-native';
 import { Text, Input, Button } from 'react-native-elements';
+
+import { AuthContext } from '../../context/authContext';
 
 import { styles } from './styles';
 import { Message } from '../../components';
 
 const SigninScreen = () => {
 	const navigation = useNavigation();
+
+	const [_, setAuth] = useContext(AuthContext);
 
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
@@ -17,6 +21,9 @@ const SigninScreen = () => {
 		if (!email || !password) {
 			return setIsFormComplete(false);
 		}
+		setAuth({
+			isLoggedIn: true,
+		});
 	};
 
 	const onNavigate = () => {

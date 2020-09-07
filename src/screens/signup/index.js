@@ -46,7 +46,7 @@ const SignupScreen = () => {
 				value={password}
 				secureTextEntry
 			/>
-			<Button title="Signin" onPress={onSignup} />
+			<Button title="Signup" onPress={onSignup} />
 			<Button
 				title="Already have an account? Signin instead."
 				type="clear"
