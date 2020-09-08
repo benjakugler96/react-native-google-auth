@@ -1,4 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
+
 const ScreenHeight = Dimensions.get('window').height;
 
 export const styles = StyleSheet.create({
@@ -7,15 +8,6 @@ export const styles = StyleSheet.create({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-	},
-	userContent: {
 		marginBottom: 200,
-		display: 'flex',
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	logoutBtn: {
-		width: 200,
-		marginTop: 100,
 	},
 });

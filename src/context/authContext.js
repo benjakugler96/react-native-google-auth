@@ -2,6 +2,8 @@ import React, { useReducer, useMemo } from 'react';
 
 const initialState = {
 	isLoggedIn: false,
+	isLoading: false,
+	user: null,
 };
 
 const initialContext = [{ ...initialState }, () => {}];
